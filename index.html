@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Recording Software | マイク選択可能な高品質録音ツール</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Essential Recording</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">機能</a></li>
+                    <li><a href="#tech">技術仕様</a></li>
+                    <li><a href="#download">ダウンロード</a></li>
+                    <li><a href="#about">概要</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Essential Recording Software</h1>
+                <h2>マイク選択可能な高品質録音ツール</h2>
+                <p>シンプルで使いやすい、高機能な音声録音ソフトウェア。複数のマイクから選択して、高品質な録音を実現します。</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn primary">ダウンロード</a>
+                    <a href="#features" class="btn secondary">詳細を見る</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/app-screenshot.png" alt="Essential Recording Software スクリーンショット">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">主な機能</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>マイク選択</h3>
+                    <p>複数のマイクデバイスから最適なものを選択可能。システムに接続されたすべてのオーディオ入力デバイスを自動検出します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>高品質録音</h3>
+                    <p>高サンプリングレートと高ビット深度に対応。クリアで高品質な音声録音を実現します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>シンプルなUI</h3>
+                    <p>PyQt6で構築された直感的なユーザーインターフェース。複雑な設定不要で、すぐに録音を開始できます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-audio"></i>
+                    </div>
+                    <h3>複数フォーマット対応</h3>
+                    <p>WAVなどの標準フォーマットに対応。pydubライブラリによる高度なオーディオ処理機能を搭載。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">技術仕様</h2>
+            <div class="tech-content">
+                <div class="tech-info">
+                    <h3>使用モジュール</h3>
+                    <ul class="module-list">
+                        <li><span class="module-name">sys</span> - システム固有のパラメータとファンクション</li>
+                        <li><span class="module-name">sounddevice</span> - オーディオデバイスの制御</li>
+                        <li><span class="module-name">numpy</span> - 数値計算と配列処理</li>
+                        <li><span class="module-name">PyQt6</span> - モダンなGUIフレームワーク
+                            <ul>
+                                <li>QApplication, QMainWindow, QWidget</li>
+                                <li>QVBoxLayout, QPushButton, QComboBox</li>
+                                <li>QLabel, QMessageBox, QProgressBar</li>
+                                <li>QTimer</li>
+                            </ul>
+                        </li>
+                        <li><span class="module-name">wave</span> - WAVオーディオファイルの読み書き</li>
+                        <li><span class="module-name">os, datetime</span> - ファイル操作と日時処理</li>
+                        <li><span class="module-name">pydub</span> - オーディオセグメント処理</li>
+                        <li><span class="module-name">tempfile, traceback</span> - 一時ファイル処理とエラー追跡</li>
+                        <li><span class="module-name">subprocess, shutil</span> - プロセス管理とファイル操作</li>
+                    </ul>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-detail-item">
+                        <h4>Python バージョン</h4>
+                        <p>3.11</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h4>コンパイラ</h4>
+                        <p>Nuitka</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h4>プラットフォーム</h4>
+                        <p>Windows, macOS, Linux</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">ダウンロード</h2>
+            <div class="download-options">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Windows</h3>
+                    <p>Windows 10/11 対応</p>
+                    <a href="#" class="btn primary">ダウンロード</a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3>macOS</h3>
+                    <p>macOS 11以降対応</p>
+                    <a href="#" class="btn primary">ダウンロード</a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>Linux</h3>
+                    <p>主要ディストリビューション対応</p>
+                    <a href="#" class="btn primary">ダウンロード</a>
+                </div>
+            </div>
+            <div class="source-code">
+                <h3>ソースコード</h3>
+                <p>GitHubでソースコードを公開しています。</p>
+                <a href="#" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">概要</h2>
+            <div class="about-content">
+                <p>Essential Recording Softwareは、シンプルで使いやすい高品質な録音ソフトウェアです。複数のマイクから選択して録音できる機能を備え、プロフェッショナルな音声録音を可能にします。</p>
+                <p>Python 3.11とPyQt6を使用して開発され、Nuitkaでコンパイルされているため、高速で安定した動作を実現しています。sounddeviceモジュールによる低レイテンシーのオーディオ処理と、pydubによる高度な音声編集機能を組み合わせることで、高品質な録音体験を提供します。</p>
+                <p>オープンソースプロジェクトとして開発されており、GitHubでソースコードを公開しています。バグ報告や機能リクエストは、GitHubのIssueページからお願いします。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Essential Recording</span>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#features">機能</a></li>
+                        <li><a href="#tech">技術仕様</a></li>
+                        <li><a href="#download">ダウンロード</a></li>
+                        <li><a href="#about">概要</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Essential Recording Software. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
