@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ダウンロード - Essential recording software</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="ダークモード切替">
+      <i data-lucide="moon" class="icon dark-icon"></i>
+      <i data-lucide="sun" class="icon light-icon"></i>
+    </button>
+  </div>
+
+  <main class="download-page">
+    <div class="container">
+      <a href="index.html" class="back-link">
+        <i data-lucide="arrow-left" class="icon-small"></i>
+        ホームに戻る
+      </a>
+
+      <h1 class="page-title">ダウンロード</h1>
+
+      <div class="download-container">
+        <div class="card mb-20">
+          <div class="card-header">
+            <h2 class="card-title">Windows版</h2>
+          </div>
+          <div class="card-content">
+            <div class="download-info">
+              <p>
+                最新バージョン: <strong>v1.0.0</strong> (2023年5月1日リリース)
+              </p>
+              <p>システム要件:</p>
+              <ul>
+                <li>Windows 10/11 (64ビット)</li>
+                <li>4GB RAM以上</li>
+                <li>30MB以上の空き容量</li>
+              </ul>
+
+              <div class="download-button-container">
+                <a href="#" class="button primary full-width-mobile">
+                  <i data-lucide="download" class="icon"></i>
+                  Windows版をダウンロード
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">インストール方法</h2>
+          </div>
+          <div class="card-content">
+            <ol class="numbered-list">
+              <li>
+                <p class="font-medium">ダウンロードしたZIPファイルを解凍します。</p>
+              </li>
+              <li>
+                <p class="font-medium">解凍したフォルダ内の「PYrecording.exe」を実行します。</p>
+                <p class="small-text note-text">
+                  ※ 初回起動時にWindows
+                  Defenderの警告が表示される場合があります。「詳細情報」→「実行」を選択して実行してください。
+                </p>
+              </li>
+              <li>
+                <p class="font-medium">
+                  アプリケーションが起動したら、使用するマイクを選択して録音を開始できます。
+                </p>
+              </li>
+            </ol>
+
+            <div class="warning-box">
+              <h3 class="warning-title">注意事項</h3>
+              <ul>
+                <li>インストーラーはありません。解凍したフォルダごと保存してください。</li>
+                <li>アンインストールする場合は、フォルダごと削除してください。</li>
+                <li>録音したファイルは「実行ファイル（.exe）が配置されている場所に」保存されます。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <div class="social-links">
+        <a href="https://github.com/yourusername/recording-software" target="_blank">
+          <i data-lucide="github" class="icon"></i>
+        </a>
+      </div>
+      <p>© <span id="current-year"></span> Essential Recording Software. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Dark mode toggle
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    
+    // Check for saved theme preference or use preferred color scheme
+    const getThemePreference = () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+
+    // Apply theme
+    const setTheme = (theme) => {
+      document.documentElement.className = theme;
+      localStorage.setItem('theme', theme);
+    };
+
+    // Initial theme setup
+    setTheme(getThemePreference());
+
+    // Toggle theme
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.className;
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+  </script>
+</body>
+</html>
